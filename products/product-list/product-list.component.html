@@ -1,0 +1,19 @@
+<div class="heading">
+    <h2>PRODUCT LIST</h2>
+</div>
+<div class="container">
+  <table class="table table-hover">
+    <tr>
+      <th>PRODUCT NAME</th>
+      <th>COST</th>
+      <th>DESCRIPTION</th>
+      <th>DELETE</th>
+    </tr>
+    <tr *ngFor="let product of service.list">
+      <td (click)="populateForm(product)">{{product.productName}}</td>
+      <td (click)="populateForm(product)">{{product.cost}}</td>
+      <td (click)="populateForm(product)">{{product.description}}</td>
+      <td><button (click)="onDelete(product.productId)" class="btn btn-sm btn-outline-danger">X</button></td>
+    </tr>
+  </table>
+</div>
